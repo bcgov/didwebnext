@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1",
+    "https://didcomm.org/messaging/v2"
+  ],
+  "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  "controller": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+    "did:key:z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf"
+  ],
+  "authentication": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#4jDJpwPh",
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#DuAWQAnf"
+  ],
+  "assertionMethod": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#BgxQ25XL"
+  ],
+  "keyAgreement": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#p5GH9pb7"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#4jDJpwPh",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6MkkmrDWT9n8rmAVfEvuyBFroc6RFNffAoycrLw4jDJpwPh"
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#DuAWQAnf",
+      "controller": "did:key:z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf"
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#BgxQ25XL",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6MkhGC8KFeSQq8y7Jt2wUgyyTgwJAbMt16gKEwCBgxQ25XL"
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#p5GH9pb7",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6LSrrmqwqyj27zSwHqzhEDbiYk3JbhHyzmnDPD4p5GH9pb7"
+    }
+  ],
+  "service": [
+    {
+      "id": "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      "type": "LinkedVerifiablePresentation",
+      "serviceEndpoint": [
+        "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ]
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#didcomm",
+      "type": "DIDCommMessaging",
+      "serviceEndpoint": {
+        "uri": "https://example.com/didcomm",
+        "accept": [
+          "didcomm/v2",
+          "didcomm/aip2;env=rfc587"
+        ],
+        "routingKeys": [
+          "did:example:somemediator#somekey"
+        ]
+      }
+    }
+  ],
+  "alsoKnownAs": [
+    "did:web:example.com"
+  ]
+}

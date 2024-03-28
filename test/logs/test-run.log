@@ -1,0 +1,213 @@
+bun test v1.0.26 (c75e768a)
+
+test/flow.test.ts:
+(pass) Create DID (2 keys) [15.10ms]
+Resolved DID Document: 1 did:tdw:jNQ4MKr87HBoox9iXKjRKt3S {
+  "@context": [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1"
+  ],
+  id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S",
+  controller: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S",
+  authentication: [ "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#FFhXVfsx" ],
+  assertionMethod: [ "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#CPixwJ8x" ],
+  verificationMethod: [
+    {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#FFhXVfsx",
+      controller: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkkXKMSiE7mXvGcR2KUpeJXwT7MPXZSBC6HZw9FFhXVfsx",
+    }, {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#CPixwJ8x",
+      controller: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6Mkg8FdKNRt4NLXm5YSUZVGWzK8vvS3DJByxAqHCPixwJ8x",
+    }
+  ],
+}
+(pass) Resolve DID [4.98ms]
+(pass) Update DID (2 keys, 1 service, add domain) [13.86ms]
+Resolved DID Document: 2 did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S {
+  "@context": [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1"
+  ],
+  id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  controller: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S" ],
+  authentication: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#5b48Zj6B" ],
+  assertionMethod: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CpsUrTh3" ],
+  verificationMethod: [
+    {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#5b48Zj6B",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6Mkw1KSvGWNAwSwWbcpwPgFARX4vKPa1xvcDMsJ5b48Zj6B",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CpsUrTh3",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkuocstfAaHsJgRnQgfQdtJiECuWEMDAbQV61aCpsUrTh3",
+    }
+  ],
+  service: [
+    {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      type: "LinkedVerifiablePresentation",
+      serviceEndpoint: [ "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ],
+    }
+  ],
+}
+(pass) Resolve DID [3.58ms]
+(pass) Update DID (3 keys, 2 services) [9.66ms]
+Resolved DID Document: 3 did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S {
+  "@context": [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1", "https://didcomm.org/messaging/v2"
+  ],
+  id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  controller: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S" ],
+  authentication: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#gJqvqaYD" ],
+  assertionMethod: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CZSeAWLE" ],
+  verificationMethod: [
+    {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#gJqvqaYD",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MksNvDtgMutKMzjezRqj8JbYuCHNjHR5HBaF2ogJqvqaYD",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CZSeAWLE",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6Mkq7Qoa2LCvLCUiq9W2J9vXH1ooDqSX2ehWGUzCZSeAWLE",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#qnYZ6fWH",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6LSdYjdAE7ZY1Gh5VPAxDJdgbg45Lq6im3N9o6HqnYZ6fWH",
+    }
+  ],
+  service: [
+    {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      type: "LinkedVerifiablePresentation",
+      serviceEndpoint: [ "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ],
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#didcomm",
+      type: "DIDCommMessaging",
+      serviceEndpoint: {
+        uri: "https://example.com/didcomm",
+        accept: [ "didcomm/v2", "didcomm/aip2;env=rfc587" ],
+        routingKeys: [ "did:example:somemediator#somekey" ],
+      },
+    }
+  ],
+  keyAgreement: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#qnYZ6fWH" ],
+}
+(pass) Resolve DID [5.65ms]
+(pass) Update DID (add alsoKnownAs) [8.73ms]
+Resolved DID Document: 4 did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S {
+  "@context": [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1", "https://didcomm.org/messaging/v2"
+  ],
+  id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  controller: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S" ],
+  authentication: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#9vYyiXiJ" ],
+  assertionMethod: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#kkHS31Z4" ],
+  verificationMethod: [
+    {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#9vYyiXiJ",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6Mkr2D4ixckmQx8tAVvXEhMuaMhzahxe61qJt7G9vYyiXiJ",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#kkHS31Z4",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkjnDzaWSBfQFmzyPvhcaABbEBQiuCBRdyQNq5kkHS31Z4",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CAHUs8cU",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6LSh1TgaytstJw2EnB8gRTZjJaHRVrUQ9K3SAofCAHUs8cU",
+    }
+  ],
+  service: [
+    {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      type: "LinkedVerifiablePresentation",
+      serviceEndpoint: [ "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ],
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#didcomm",
+      type: "DIDCommMessaging",
+      serviceEndpoint: {
+        uri: "https://example.com/didcomm",
+        accept: [ "didcomm/v2", "didcomm/aip2;env=rfc587" ],
+        routingKeys: [ "did:example:somemediator#somekey" ],
+      },
+    }
+  ],
+  keyAgreement: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CAHUs8cU" ],
+  alsoKnownAs: [ "did:web:example.com" ],
+}
+(pass) Resolve DID [19.65ms]
+(pass) Update DID (add external controller) [15.12ms]
+Resolved DID Document: 5 did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S {
+  "@context": [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1", "https://didcomm.org/messaging/v2"
+  ],
+  id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  controller: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S", "did:key:z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf"
+  ],
+  authentication: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#4jDJpwPh", "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#DuAWQAnf"
+  ],
+  assertionMethod: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#BgxQ25XL" ],
+  verificationMethod: [
+    {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#4jDJpwPh",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkkmrDWT9n8rmAVfEvuyBFroc6RFNffAoycrLw4jDJpwPh",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#DuAWQAnf",
+      controller: "did:key:z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkhoA3GQu8Sek1GFrMpmZNFxy2fSXVzzMggdndDuAWQAnf",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#BgxQ25XL",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6MkhGC8KFeSQq8y7Jt2wUgyyTgwJAbMt16gKEwCBgxQ25XL",
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#p5GH9pb7",
+      controller: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      type: "Multikey",
+      publicKeyMultibase: "z6LSrrmqwqyj27zSwHqzhEDbiYk3JbhHyzmnDPD4p5GH9pb7",
+    }
+  ],
+  service: [
+    {
+      id: "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      type: "LinkedVerifiablePresentation",
+      serviceEndpoint: [ "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ],
+    }, {
+      id: "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#didcomm",
+      type: "DIDCommMessaging",
+      serviceEndpoint: {
+        uri: "https://example.com/didcomm",
+        accept: [ "didcomm/v2", "didcomm/aip2;env=rfc587" ],
+        routingKeys: [ "did:example:somemediator#somekey" ],
+      },
+    }
+  ],
+  keyAgreement: [ "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#p5GH9pb7" ],
+  alsoKnownAs: [ "did:web:example.com" ],
+}
+(pass) Resolve DID [8.85ms]
+
+test/sad.test.ts:
+(pass) Update with wrong key fails resolution [6.21ms]
+
+ 11 pass
+ 0 fail
+ 46 expect() calls
+Ran 11 tests across 2 files. [201.00ms]

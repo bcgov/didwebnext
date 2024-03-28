@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/multikey/v1",
+    "https://identity.foundation/linked-vp/contexts/v1",
+    "https://didcomm.org/messaging/v2"
+  ],
+  "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+  "controller": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S"
+  ],
+  "authentication": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#gJqvqaYD"
+  ],
+  "assertionMethod": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CZSeAWLE"
+  ],
+  "keyAgreement": [
+    "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#qnYZ6fWH"
+  ],
+  "verificationMethod": [
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#gJqvqaYD",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6MksNvDtgMutKMzjezRqj8JbYuCHNjHR5HBaF2ogJqvqaYD"
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#CZSeAWLE",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6Mkq7Qoa2LCvLCUiq9W2J9vXH1ooDqSX2ehWGUzCZSeAWLE"
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#qnYZ6fWH",
+      "controller": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S",
+      "type": "Multikey",
+      "publicKeyMultibase": "z6LSdYjdAE7ZY1Gh5VPAxDJdgbg45Lq6im3N9o6HqnYZ6fWH"
+    }
+  ],
+  "service": [
+    {
+      "id": "did:tdw:jNQ4MKr87HBoox9iXKjRKt3S#whois",
+      "type": "LinkedVerifiablePresentation",
+      "serviceEndpoint": [
+        "https://example.com/docs/jNQ4MKr87HBoox9iXKjRKt3S/whois.json"
+      ]
+    },
+    {
+      "id": "did:tdw:example.com:jNQ4MKr87HBoox9iXKjRKt3S#didcomm",
+      "type": "DIDCommMessaging",
+      "serviceEndpoint": {
+        "uri": "https://example.com/didcomm",
+        "accept": [
+          "didcomm/v2",
+          "didcomm/aip2;env=rfc587"
+        ],
+        "routingKeys": [
+          "did:example:somemediator#somekey"
+        ]
+      }
+    }
+  ]
+}
